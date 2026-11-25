@@ -19,18 +19,17 @@ Report sections, in order:
   4. Mitigations this script cannot detect (check these by hand)
 
 ## USAGE
-  Web (recommended: checks the configuration your web workers actually use)
+### Web (recommended: checks the configuration your web workers actually use)
     1. Add your IP address to $CONFIG['allowed_ips'] below.
     2. Upload into the docroot of each site / FPM pool you want to check, then open it.
          ?format=text   plain-text output
     3. DELETE THE FILE when finished. It discloses server configuration.
-  CLI
-    php php2shell_check.php
+### CLI
+    > php php2shell_check.php
     Exit codes without logging: 0 = patched, 1 = vulnerable, 2 = cannot confirm
     Exit codes with logging:    0 = report written, 3 = not written (busy or write failed)
-    The CLI often loads a different php.ini than the web server, so CLI results
-    describe the CLI only.
-  OUTPUT MODES (decided only by $CONFIG['log_file']; no URL or CLI parameter changes it)
+    The CLI often loads a different php.ini than the web server, so CLI results describe the CLI only.
+### OUTPUT MODES (decided only by $CONFIG['log_file']; no URL or CLI parameter changes it)
     log_file empty : the full report is shown on screen.
     log_file set   : the report goes ONLY to the log file. The screen shows a timestamp
                      and a confirmation, never the result or the log location.
