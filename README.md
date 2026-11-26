@@ -1,4 +1,4 @@
-# php2shell
+# php2shell-check
 
 Read-only exposure check for PHP2Shell (CVE-2026-109618, CVE-2026-109619)
 
